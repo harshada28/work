@@ -1,0 +1,231 @@
+Check if a number is multiple of 9 using bitwise operators
+------------------------------------------------------------------------
+How to swap two numbers without using a temporary variable?
+------------------------------------------------------------------------
+Divide and Conquer | Set 4 (Karatsuba algorithm for fast multiplication)
+Given two binary strings that represent value of two integers, 
+find the product of two strings. 
+For example, if the first bit string is “1100? and second bit string is “1010?, output should be 120.
+For simplicity, let the length of two strings be same and be n.
+------------------------------------------------------------------------
+Find position of the only set bit
+Given a number having only one ’1' and all other ’0's in its binary representation, 
+find position of the only set bit. 
+------------------------------------------------------------------------
+Swap all odd and even bits
+Given an unsigned integer, swap all odd bits with even bits. For example, 
+if the given number is 23 (00010111), it should be converted to 43 (00101011). 
+Every even position bit is swapped with adjacent bit on right side
+ (even position bits are highlighted in binary representation of 23), 
+ and every odd position bit is swapped with adjacent on left side.
+ ------------------------------------------------------------------------
+Add two bit strings
+Given two bit sequences as strings, write a function to return the addition of the two sequences.
+ Bit strings can be of different lengths also.  For example, if string 1 is “1100011?
+ and second string 2 is “10?, then the function should return “1100101?.
+------------------------------------------------------------------------
+Write your own strcmp that ignores cases
+Write a modified strcmp function which ignores cases and returns -1 if s1 < s2,
+ 0 if s1 = s2, else returns 1. For example, your strcmp
+ should consider "GeeksforGeeks" and "geeksforgeeks" as same string.
+------------------------------------------------------------------------
+Binary representation of a given number
+Write a program to print Binary representation of a given number.
+------------------------------------------------------------------------
+Find the element that appears once
+Given an array where every element occurs three times, except one element which occurs only once. 
+Find the element that occurs once. Expected time complexity is O(n) and O(1) extra space.
+Examples:
+
+Input: arr[] = {12, 1, 12, 3, 12, 1, 1, 2, 3, 3}
+Output: 2
+------------------------------------------------------------------------
+Detect if two integers have opposite signs
+Given two signed integers, write a function that returns true if 
+the signs of given integers are different, otherwise false. For example, the function should 
+return true -1 and +100, and should return false for -100 and -200. 
+The function should not use any of the arithmetic operators.
+------------------------------------------------------------------------
+Count total set bits in all numbers from 1 to n
+Given a positive integer n, count the total number of set bits in binary 
+representation of all numbers from 1 to n.
+
+Examples:
+
+Input: n = 3
+Output:  4
+
+Input: n = 6
+Output: 9
+
+Input: n = 7
+Output: 12
+
+Input: n = 8
+Output: 13
+------------------------------------------------------------------------
+Swap bits in a given number
+Given a number x and two positions (from right side) in binary representation of x, 
+write a function that swaps n bits at given two positions and returns the result.
+ It is also given that the two sets of bits do not overlap.
+
+Examples:
+
+Let p1 and p2 be the two given positions.
+
+Example 1
+Input:
+x = 47 (00101111)
+p1 = 1 (Start from second bit from right side)
+p2 = 5 (Start from 6th bit from right side)
+n = 3 (No of bits to be swapped)
+Output:
+227 (11100011)
+The 3 bits starting from the second bit (from right side) are 
+swapped with 3 bits starting from 6th position (from right side) 
+
+
+Example 2
+Input:
+x = 28 (11100)
+p1 = 0 (Start from first bit from right side)
+p2 = 3 (Start from 4th bit from right side)
+n = 2 (No of bits to be swapped)
+Output:
+7 (00111)
+The 2 bits starting from 0th postion (from right side) are
+swapped with 2 bits starting from 4th position (from right side) 
+Solution
+------------------------------------------------------------------------
+Add two numbers without using arithmetic operators
+Write a function Add() that returns sum of two integers. 
+The function should not use any of the arithmetic operators (+, ++, –, -, .. etc).
+------------------------------------------------------------------------
+Smallest of three integers without comparison operators
+Write a C program to find the smallest of three integers, without using any of the comparison operators.
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+A Boolean Array Puzzle
+Input: A array arr[] of two elements having value 0 and 1
+
+Output: Make both elements 0.
+
+Specifications: Following are the specifications to follow.
+1) It is guaranteed that one element is 0 but we do not know its position.
+2) We can’t say about another element it can be 0 or 1.
+3) We can only complement array elements, no other operation like and, or, multi, division, …. etc.
+4) We can’t use if, else and loop constructs.
+5) Obviously, we can’t directly assign 0 to array elements.
+------------------------------------------------------------------------
+Program to count number of set bits in an (big) array
+Given an integer array of length N (an arbitrarily large number). 
+How to count number of set bits in the array?
+------------------------------------------------------------------------
+Next higher number with same number of set bits
+Given a number x, find next number with same number of 1 bits in it’s binary representation.
+
+For example, consider x = 12, whose binary representation is 1100 (excluding leading zeros on 32 bit machine).
+ It contains two logic 1 bits. The next higher number with two logic 1 bits is 17 (100012).
+------------------------------------------------------------------------
+Optimization Techniques | Set 1 (Modulus)
+Modulus operator is costly.
+READ FROM WEB
+------------------------------------------------------------------------
+Add 1 to a given number
+Write a program to add one to a given number.
+ You are not allowed to use operators like ‘+’, ‘-’, ‘*’, ‘/’, ‘++’, ‘–’ …etc.
+
+Examples:
+Input: 12
+Output: 13
+
+Input: 6
+Output: 7
+------------------------------------------------------------------------
+Multiply a given Integer with 3.5
+Given a integer x, write a function that multiplies x with 3.5 and
+ returns the integer result. You are not allowed to use %, /, *.
+
+Examples:
+Input: 2
+Output: 7
+
+Input: 5
+Output: 17 (Ignore the digits after decimal point)
+------------------------------------------------------------------------
+Turn off the rightmost set bit
+------------------------------------------------------------------------
+Find whether a given number is a power of 4 or not
+------------------------------------------------------------------------
+Compute the integer absolute value (abs) without branching
+------------------------------------------------------------------------
+Compute modulus division by a power-of-2-number
+Compute n modulo d without division(/) and modulo(%) operators, where d is a power of 2 number.
+------------------------------------------------------------------------
+Compute the minimum or maximum of two integers without branching
+------------------------------------------------------------------------
+Rotate bits of a number
+Bit Rotation: A rotation (or circular shift) is an operation similar to shift except 
+that the bits that fall off at one end are put back to the other end.
+
+In left rotation, the bits that fall off at left end are put back at right end.
+
+In right rotation, the bits that fall off at right end are put back at left end.
+
+Example:
+Let n is stored using 8 bits. Left rotation of n = 11100101 by 3 makes n = 00101111 
+(Left shifted by 3 and first 3 bits are put back in last ). If n is stored using 16 bits
+ or 32 bits then left rotation of n (000…11100101) becomes 00..0011100101000.
+Right rotation of n = 11100101 by 3 makes n = 10111100 (Right shifted by 3 and last 3 bits
+ are put back in first ) if n is stored using 8 bits. If n is stored using 16 bits or 32 bits 
+ then right rotation of n (000…11100101) by 3 becomes 101000..0011100.
+------------------------------------------------------------------------
+Find the two non-repeating elements in an array of repeating elements
+Asked by SG
+Given an array in which all numbers except two are repeated once. 
+(i.e. we have 2n+2 numbers and n numbers are occurring twice 
+and remaining two have occurred once). Find those two numbers in the most efficient way.
+------------------------------------------------------------------------
+Count number of bits to be flipped to convert A to B
+------------------------------------------------------------------------
+Count set bits in an integer
+------------------------------------------------------------------------
+Write an Efficient C Program to Reverse Bits of a Number
+------------------------------------------------------------------------
+Check for Integer Overflow
+Write a “C” function, int addOvf(int* result, int a, int b) 
+If there is no overflow, the function places the resultant = sum a+b in “result” and returns 0. 
+Otherwise it returns -1. The solution of casting to long and adding to find detecting the overflow is not allowed.
+------------------------------------------------------------------------
+Find the Number Occurring Odd Number of Times
+Given an array of positive integers. All numbers occur even number of times 
+except one number which occurs odd number of times. Find the number in O(n) time & constant space.
+
+Example:
+I/P = [1, 2, 3, 2, 3, 1, 3]
+O/P = 3
+------------------------------------------------------------------------
+Position of rightmost set bit
+------------------------------------------------------------------------
+Write one line C function to find whether a no is power of two
+------------------------------------------------------------------------
+Efficient way to multiply with 7
+------------------------------------------------------------------------
+Write a C program to find the parity of an unsigned integer
+------------------------------------------------------------------------
+Next Power of 2
+Write a function that, for a given no n, finds a number p which is greater than or equal to n and is a power of 2.
+
+    IP 5
+    OP 8     
+
+    IP 17
+    OP 32     
+
+    IP 32
+    OP 32     
+------------------------------------------------------------------------
+Write an Efficient Method to Check if a Number is Multiple of 3
+
+------------------------------------------------------------------------

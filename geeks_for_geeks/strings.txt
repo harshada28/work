@@ -1,0 +1,235 @@
+Given two sequences, print the longest subsequence present in both of them.
+
+Examples:
+LCS for input Sequences “ABCDGH” and “AEDFHR” is “ADH” of length 3.
+LCS for input Sequences “AGGTAB” and “GXTXAYB” is “GTAB” of length 4.
+-----------------------------------------------------------------------------
+A suffix array is a sorted array of all suffixes of a given string. The definition is similar to Suffix Tree which is compressed trie of all suffixes of the given text.
+
+Let the given string be "banana".
+
+0 banana                          5 a
+1 anana     Sort the Suffixes     3 ana
+2 nana      ---------------->     1 anana  
+3 ana        alphabetically       0 banana  
+4 na                              4 na   
+5 a                               2 nana
+
+The suffix array for "banana" is {5, 3, 1, 0, 4, 2} 
+-----------------------------------------------------------------------------
+Rearrange a string so that all same characters become d distance away
+Given a string and a positive integer d. Some characters may be repeated in the given string. Rearrange characters of the given string such that the same characters become d distance away from each other. Note that there can be many possible rearrangements, the output should be one of the possible rearrangements. If no such arrangement is possible, that should also be reported.
+Expected time complexity is O(n) where n is length of input string.
+
+Examples:
+Input:  "abb", d = 2
+Output: "bab"
+
+Input:  "aacbbc", d = 3
+Output: "abcabc"
+
+Input: "geeksforgeeks", d = 3
+Output: egkegkesfesor
+
+Input:  "aaa",  d = 2
+Output: Cannot be rearranged
+-----------------------------------------------------------------------------
+Recursively remove all adjacent duplicates
+Given a string, recursively remove adjacent duplicate characters from string. The output string should not have any adjacent duplicates. See following examples.
+
+Input:  azxxzy
+Output: ay
+First "azxxzy" is reduced to "azzy". The string "azzy" contains duplicates, 
+so it is further reduced to "ay".
+
+Input: geeksforgeeg
+Output: gksfor
+First "geeksforgeeg" is reduced to "gksforgg". The string "gksforgg" contains 
+duplicates, so it is further reduced to "gksfor".
+
+Input: caaabbbaacdddd
+Output: Empty String
+
+Input: acaaabbbacdddd
+Output: acac
+------------------------------------------------------------------------------------
+Find the first non-repeating character from a stream of characters
+Given a stream of characters, find the first non-repeating character from stream. 
+You need to tell the first non-repeating character in O(1) time at any moment.
+
+If we follow the first approach discussed here, then we need to store the stream so that we can 
+traverse it one more time to find the first non-repeating character at any moment. 
+If we use extended approach discussed in the same post, we need to go through the count array every 
+time first non-repeating element is queried. We can find the first non-repeating character from stream at any moment without traversing any array.
+--------------------------------------------------------------------------------------
+Given three strings A, B and C. Write a function that checks whether C is an interleaving of A and B. 
+C is said to be interleaving A and B, if it contains all characters of A and B and order of all characters in individual strings is preserved.
+
+We have discussed a simple solution of this problem here. The simple solution doesn’t work if strings 
+A and B have some common characters. For example A = “XXY”, string B = “XXZ” and string C = “XXZXXXY”.
+ To handle all cases, two possibilities need to be considered.
+
+a) If first character of C matches with first character of A, we move one character ahead in A and C and recursively check.
+
+b) If first character of C matches with first character of B, we move one character ahead in B and C and recursively check.
+---------------------------------------------------------------------------------------------------------------
+Remove “b” and “ac” from a given string
+Given a string, eliminate all “b” and “ac” in the string, you have to replace them in-place, and you are 
+only allowed to iterate over the string once. (Source Google Interview Question)
+
+Examples:
+
+acbac   ==>  ""
+aaac    ==>  aa
+ababac  ==>   aa
+bbbbd   ==>   d
+The two conditions are:
+1. Filtering of all ‘b’ and ‘ac’ should be in single pass
+2. No extra space allowed.
+---------------------------------------------------------------------------------------------------------------
+Given two strings ‘X’ and ‘Y’, find the length of the longest common substring. For example, 
+if the given strings are “GeeksforGeeks” and “GeeksQuiz”, the output should be 5 as longest common substring is “Geeks”
+
+Let m and n be the lengths of first and second strings respectively.
+--------------------------------------------------------------------------------------------------------------
+The atoi() function takes a string (which represents an integer) as an argument and returns its value.
+--------------------------------------------------------------------------------------------------------------
+String matching where one string contains wildcard characters
+Given two strings where first string may contain wild card characters and second string is a normal string.
+Write a function that returns true if the two strings match. The following are allowed wild card characters in first string.
+
+* --> Matches with 0 or more instances of any character or set of characters.
+? --> Matches with any one character.
+For example, “g*ks” matches with “geeks” match. And string “ge?ks*” matches with “geeksforgeeks”
+(note ‘*’ at the end of first string). But “g*k” doesn’t match with “gee” as character ‘k’ is not present in second string.
+_________________________________________________--------------------------------------------------------
+Given a string, count number of words in it. The words are separated by following characters: space (‘ ‘) 
+or new line (‘\n’) or tab (‘\t’) or a combination of these.
+---------------------------------------------------------------------------------------------------------
+Given an array of words, print all anagrams together. For example, if the given array is {“cat”, “dog”, “tac”, “god”, “act”},
+ then output may be “cat tac act dog god”.
+---------------------------------------------------------------------------------------------------------
+Given a string, find the longest substring which is palindrome. For example, if the given string is 
+“forgeeksskeegfor”, the output should be “geeksskeeg”.
+---------------------------------------------------------------------------------------------------------
+
+Given a string, move all even positioned elements to end of string. While moving elements, 
+keep the relative order of all even positioned and odd positioned elements same. 
+For example, if the given string is “a1b2c3d4e5f6g7h8i9j1k2l3m4″, 
+convert it to “abcdefghijklm1234567891234″ in-place and in O(n) time complexity.
+---------------------------------------------------------------------------------------------------------
+Given a string, find the longest substring which is palindrome. For example, 
+if the given string is “forgeeksskeegfor”, the output should be “geeksskeeg”.
+---------------------------------------------------------------------------------------------------------
+Given a string, print all permutations of it in sorted order. For example, 
+if the input string is “ABC”, then output should be “ABC, ACB, BAC, BCA, CAB, CBA”.
+---------------------------------------------------------------------------------------------------------
+Given a string, find its rank among all its permutations sorted lexicographically. 
+For example, rank of “abc” is 1, rank of “acb” is 2, and rank of “cba” is 6.
+
+For simplicity, let us assume that the string does not contain any duplicated characters.
+---------------------------------------------------------------------------------------------------------
+Given a string, a partitioning of the string is a palindrome partitioning if every substring of the 
+partition is a palindrome. For example, “aba|b|bbabb|a|b|aba” is a palindrome partitioning of 
+“ababbbabbababa”. Determine the fewest cuts needed for palindrome partitioning of a given string. 
+For example, minimum 3 cuts are needed for “ababbbabbababa”. The three cuts are “a|babbbab|b|ababa”. 
+If a string is palindrome, then minimum 0 cuts are needed. If a string of length n containing all 
+different characters, then minimum n-1 cuts are needed.
+---------------------------------------------------------------------------------------------------------
+Given a string, find the length of the longest substring without repeating characters. 
+For example, the longest substrings without repeating characters for “ABDEFGABEF” are 
+“BDEFGA” and “DEFGAB”, with length 6. For “BBBB” the longest substring is “B”, with length 1. 
+For “GEEKSFORGEEKS”, there are two longest substrings shown in the below diagrams, with length 7.
+---------------------------------------------------------------------------------------------------------
+Given a string of length n, print all permutation of the given string. 
+Repetition of characters is allowed. Print these permutations in lexicographically sorted order 
+Examples:
+Input: AB
+Ouput: All permutations of AB with repetition are:
+      AA
+      AB
+      BA
+      BB
+
+Input: ABC
+Output: All permutations of ABC with repetition are:
+       AAA
+       AAB
+       AAC
+       ABA
+       ...
+       ...
+       CCB
+       CCC
+---------------------------------------------------------------------------------------------------------
+Given two strings str1 and str2, write a function that prints all interleavings of the given two strings. 
+You may assume that all characters in both strings are different
+
+Example:
+
+Input: str1 = "AB",  str2 = "CD"
+Output:
+    ABCD
+    ACBD
+    ACDB
+    CABD
+    CADB
+    CDAB
+
+Input: str1 = "AB",  str2 = "C"
+Output:
+    ABC
+    ACB
+    CAB
+
+---------------------------------------------------------------------------------------------------------
+Given three strings A, B and C. Write a function that checks whether C is an interleaving of A and B. 
+C is said to be interleaving A and B, if it contains all characters of A and B and order of 
+all characters in individual strings is preserved. See previous post for examples.
+---------------------------------------------------------------------------------------------------------
+Write a function to check whether two given strings are anagram of each other or not. 
+An anagram of a string is another string that contains same characters, only the order of characters can be different. 
+For example, “abcd” and “dabc” are anagram of each other.
+--------------------------------------------------------------------------------------------------------
+Given a text txt[0..n-1] and a pattern pat[0..m-1], write a function search(char pat[], char txt[]) 
+that prints all occurrences of pat[] in txt[]. You may assume that n > m.
+
+Examples:
+1) Input:
+
+  txt[] =  "THIS IS A TEST TEXT"
+  pat[] = "TEST"
+Output:
+
+Pattern found at index 10
+
+2) Input:
+
+  txt[] =  "AABAACAADAABAAABAA"
+  pat[] = "AABA"
+Output:
+
+   Pattern found at index 0
+   Pattern found at index 9
+   Pattern found at index 13
+---------------------------------------------------------------------------------------------------------
+Pattern Searching | Set 6 (Efficient Construction of Finite Automata)
+In the previous post, we discussed Finite Automata based pattern searching algorithm. 
+The FA (Finite Automata) construction method discussed in previous post takes O((m^3)*NO_OF_CHARS) time. 
+FA can be constructed in O(m*NO_OF_CHARS) time. In this post, we will discuss the O(m*NO_OF_CHARS) algorithm for FA construction. 
+The idea is similar to lps (longest prefix suffix) array construction discussed in the KMP algorithm. We use previously filled rows to fill a new row.
+
+
+---------------------------------------------------------------------------------------------------------
+Print all the duplicates in the input string.
+---------------------------------------------------------------------------------------------------------
+Remove all duplicates from the input string.
+---------------------------------------------------------------------------------------------------------
+Return maximum occurring character in the input string
+Write an efficient C function to return maximum occurring character in the input string e.g., 
+if input string is “test string” then function should return ‘t’.
+---------------------------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------------------------
+
+

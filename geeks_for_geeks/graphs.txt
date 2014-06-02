@@ -1,0 +1,13 @@
+GRAPHS:
+*Given a directed weighted graph. You are also given the shortest path from a source vertex ‘s’ to a destination vertex ‘t’.
+If weight of every edge is increased by 10 units, does the shortest path remain same in the modified graph?
+
+*This is similar to above question. Does the shortest path change when weights of all edges are multiplied by 10?
+
+* Given a directed graph where every edge has weight as either 1 or 2, find the shortest path from a given source vertex ‘s’ to a given destination vertex ‘t’. Expected time complexity is O(V+E).
+
+*Given a directed acyclic weighted graph, how to find the shortest path from a source s to a destination t in O(V+E) time?
+
+*Given a directed graph, find out whether the graph is strongly connected or not. A directed graph is strongly connected if there is a path between any two pair of vertices. For example, following is a strongly connected graph.
+
+
