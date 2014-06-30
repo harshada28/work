@@ -1,0 +1,510 @@
+Reverse alternate levels of a perfect binary tree
+Given a Perfect Binary Tree, reverse the alternate level nodes of the binary tree.
+
+  
+Given tree: 
+               a
+            /     \
+           b       c
+         /  \     /  \
+        d    e    f    g
+       / \  / \  / \  / \
+       h  i j  k l  m  n  o 
+
+Modified tree:
+  	       a
+            /     \
+           c       b
+         /  \     /  \
+        d    e    f    g
+       / \  / \  / \  / \
+      o  n m  l k  j  i  h 
+_____________________________________________________________________________________________________________________________________
+Transform a BST to greater sum tree
+Given a BST, transform it into greater sum tree where each node contains sum of all nodes greater than that node.
+_____________________________________________________________________________________________________________________________________
+Print a Binary Tree in Vertical Order | Set 2 (Hashmap based Method)
+Given a binary tree, print it vertically. The following example illustrates vertical order traversal.
+
+           1
+        /    \
+       2      3
+      / \    / \
+     4   5  6   7
+             \   \
+              8   9 
+               
+			  
+The output of print this tree vertically will be:
+4
+2
+1 5 6
+3 8
+7
+9
+_____________________________________________________________________________________________________________________________________
+Print Right View of a Binary Tree
+Given a Binary Tree, print Right view of it. Right view of a Binary Tree is set of nodes visible when tree is 
+visited from Right side.
+
+Right view of following tree is 1 3 7 8
+
+          1
+       /     \
+     2        3
+   /   \     /  \
+  4     5   6    7
+                  \
+                   8
+_____________________________________________________________________________________________________________________________________
+Construct a tree from Inorder and Level order traversals
+Given inorder and level-order traversals of a Binary Tree, construct the Binary Tree. Following is an example to 
+illustrate the problem.
+
+
+Input: Two arrays that represent Inorder
+       and level order traversals of a 
+       Binary Tree
+in[]    = {4, 8, 10, 12, 14, 20, 22};
+level[] = {20, 8, 22, 4, 12, 10, 14};
+
+Output: Construct the tree represented 
+        by the two arrays.
+        For the above two arrays, the 
+        constructed tree is shown in 
+        the diagram on right side
+_____________________________________________________________________________________________________________________________________
+Print all nodes at distance k from a given node
+Given a binary tree, a target node in the binary tree, and an integer value k, print all
+ the nodes that are at distance k from the given target node. No parent pointers are available.
+
+Consider the tree shown in diagram
+
+Input: target = pointer to node with data 8. 
+       root = pointer to node with data 20.
+       k = 2.
+Output : 10 14 22
+
+If target is 14 and k is 3, then output 
+should be "4 20"
+_____________________________________________________________________________________________________________________________________
+Print a Binary Tree in Vertical Order | Set 1
+Given a binary tree, print it vertically. The following example illustrates vertical order traversal.
+
+           1
+        /    \
+       2      3
+      / \    / \
+     4   5  6   7
+             \   \
+              8   9 
+               
+			  
+The output of print this tree vertically will be:
+4
+2
+1 5 6
+3 8
+7
+9_____________________________________________________________________________________________________________________________________
+Interval Tree
+Consider a situation where we have a set of intervals and we need following operations to be implemented efficiently. 
+1) Add an interval
+2) Remove an interval
+3) Given an interval x, find if x overlaps with any of the existing intervals.
+
+Interval Tree: The idea is to augment a self-balancing Binary Search Tree (BST) like Red Black Tree, AVL Tree, 
+etc to maintain set of intervals so that all operations can be done in O(Logn) time.
+
+Every node of Interval Tree stores following information.
+a) i: An interval which is represented as a pair [low, high]
+b) max: Maximum high value in subtree rooted with this node.
+
+The low value of an interval is used as key to maintain order in BST. The insert and delete operations
+ are same as insert and delete in self-balancing BST used
+_____________________________________________________________________________________________________________________________________
+Check if a given Binary Tree is height balanced like a Red-Black Tree
+In a Red-Black Tree, the maximum height of a node is at most twice the minimum height 
+(The four Red-Black tree properties make sure this is always followed). Given a Binary Search Tree,
+ we need to check for following property.
+For every node, length of the longest leaf to node path has not more than twice the nodes 
+on shortest path from node to leaf.
+
+    12                                        40
+      \                                     /    \ 
+       14                                 10      100    
+         \                                        /  \
+          16                                     60   150    
+ Cannot be a Red-Black Tree              It can be Red-Black Tree
+ with any color assignment
+ Max height of 12 is 1
+ Min height of 12 is 3
+
+
+          10
+        /   \
+      5     100
+           /   \
+          50   150
+         /
+        40 
+ It can also be Red-Black Tree
+Expected time complexity is O(n). The tree should be traversed at-most once in the solution.
+_____________________________________________________________________________________________________________________________________
+
+Print all nodes that are at distance k from a leaf node
+Given a Binary Tree and a positive integer k, print all nodes that are distance k from a leaf node.
+
+Here the meaning of distance is different from previous post. Here k distance from a leaf means k levels
+ higher than a leaf node. For example if k is more than height of Binary Tree, then nothing should be printed.
+ Expected time complexity is O(n) where n is the number nodes in the given Binary Tree.
+_____________________________________________________________________________________________________________________________________
+Find distance between two given keys of a Binary Tree
+Find the distance between two keys in a binary tree, no parent pointers are given. Distance between 
+two nodes is the minimum number of edges to be traversed to reach one node from other.
+_____________________________________________________________________________________________________________________________________
+Lowest Common Ancestor in a Binary Tree | Set 1
+Given a binary tree (not a binary search tree) and two values say n1 and n2, write a program to find the least common ancestor.
+_____________________________________________________________________________________________________________________________________
+Print all nodes that don’t have sibling
+Given a Binary Tree, print all nodes that don’t have a sibling (a sibling is a node that has same parent. 
+In a Binary Tree, there can be at most one sibling). Root should not be printed as root cannot have a sibling.
+_____________________________________________________________________________________________________________________________________
+Convert a given Binary Tree to Doubly Linked List | Set 3
+Given a Binary Tree (BT), convert it to a Doubly Linked List(DLL) In-Place. The left and right pointers
+ in nodes are to be used as previous and next pointers respectively in converted DLL.
+ The order of nodes in DLL must be same as Inorder of the given Binary Tree. The first node of Inorder
+ traversal (left most node in BT) must be head node of the DLL.
+_____________________________________________________________________________________________________________________________________
+Sum of all the numbers that are formed from root to leaf paths
+Given a binary tree, where every node value is a Digit from 1-9 .Find the sum of all the 
+numbers which are formed from root to leaf paths.
+
+For example consider the following Binary Tree.
+
+                                          6
+                                      /      \
+                                    3          5
+                                  /   \          \
+                                 2     5          4  
+                                      /   \
+                                     7     4
+  There are 4 leaves, hence 4 root to leaf paths:
+   Path                    Number
+  6->3->2                   632
+  6->3->5->7               6357
+  6->3->5->4               6354
+  6->5>4                    654   
+Answer = 632 + 6357 + 6354 + 654 = 13997 
+_____________________________________________________________________________________________________________________________________
+Find next right node of a given key
+Given a Binary tree and a key in the binary tree, find the node right to the given key.
+ If there is no node on right side, then return NULL. Expected time complexity is O(n) 
+where n is the number of nodes in the given binary tree.
+
+For example, consider the following Binary Tree. Output for 2 is 6, output for 4 is 5. 
+Output for 10, 6 and 5 is NULL.
+
+                  10
+               /      \
+	      2         6
+           /   \         \ 
+	 8      4          5
+_____________________________________________________________________________________________________________________________________
+Deepest left leaf node in a binary tree
+Given a Binary Tree, find the deepest leaf node that is left child of its parent. For example, 
+consider the following tree. The deepest left leaf node is the node with value 9.
+
+       1
+     /   \
+    2     3
+  /      /  \  
+ 4      5    6
+        \     \
+         7     8
+        /       \
+       9         10
+_____________________________________________________________________________________________________________________________________
+Extract Leaves of a Binary Tree in a Doubly Linked List
+Given a Binary Tree, extract all leaves of it in a Doubly Linked List (DLL). Note that the DLL need 
+to be created in-place. Assume that the node structure of DLL and Binary Tree is same,
+ only the meaning of left and right pointers are different. In DLL, left means previous pointer and right means next pointer.
+
+Let the following be input binary tree
+        1
+     /     \
+    2       3
+   / \       \
+  4   5       6
+ / \         / \
+7   8       9   10
+
+
+Output:
+Doubly Linked List
+7<->8<->5<->9<->10
+
+Modified Tree:
+        1
+     /     \
+    2       3
+   /         \
+  4           6
+_____________________________________________________________________________________________________________________________________
+Remove all nodes which don’t lie in any path with sum>= k
+Given a binary tree, a complete path is defined as a path from root to a leaf. The sum of all nodes on that path is 
+defined as the sum of that path. Given a number K, you have to remove (prune the tree) all nodes which don’t 
+lie in any path with sum>=k.
+
+Note: A node can be part of multiple paths. So we have to delete it only in case when all paths from it have sum less than K.
+
+Consider the following Binary Tree
+          1 
+      /      \
+     2        3
+   /   \     /  \
+  4     5   6    7
+ / \    /       /
+8   9  12      10
+   / \           \
+  13  14         11
+      / 
+     15 
+
+For input k = 20, the tree should be changed to following
+(Nodes with values 6 and 8 are deleted)
+          1 
+      /      \
+     2        3
+   /   \        \
+  4     5        7
+   \    /       /
+    9  12      10
+   / \           \
+  13  14         11
+      / 
+     15 
+
+For input k = 45, the tree should be changed to following.
+      1 
+    / 
+   2   
+  / 
+ 4  
+  \   
+   9    
+    \   
+     14 
+     /
+    15 
+
+_____________________________________________________________________________________________________________________________________
+Add all greater values to every node in a given BST
+Given a Binary Search Tree (BST), modify it so that all greater values in the given BST are added to every node. 
+
+              50
+           /      \
+         30        70
+        /   \      /  \
+      20    40    60   80 
+
+The above tree should be modified to following 
+
+              260
+           /      \
+         330        150
+        /   \       /  \
+      350   300    210   80
+_____________________________________________________________________________________________________________________________________
+Print Left View of a Binary Tree
+Given a Binary Tree, print left view of it. Left view of a Binary Tree is set of nodes visible when tree 
+is visited from left side. Left view of following tree is 12, 10, 25.
+
+          12
+       /     \
+     10       30
+            /    \
+          25      40 
+The left view contains all nodes that are first nodes in their levels.
+_____________________________________________________________________________________________________________________________________
+Check if all leaves are at same level
+Given a Binary Tree, check if all leaves are at same level or not.
+_____________________________________________________________________________________________________________________________________
+Find depth of the deepest odd level leaf node
+Write a C code to get the depth of the deepest odd level leaf node in a binary tree. 
+Consider that level starts with 1. Depth of a leaf node is number of nodes on the path from root to leaf (including both leaf and root).
+_____________________________________________________________________________________________________________________________________
+Print Postorder traversal from given Inorder and Preorder traversals
+_____________________________________________________________________________________________________________________________________
+Difference between sums of odd level and even level nodes of a Binary Tree
+Given a a Binary Tree, find the difference between the sum of nodes at odd level and 
+the sum of nodes at even level. Consider root as level 1, left and right children of root as level 2 and so on.
+
+For example, in the following tree, sum of nodes at odd level is (5 + 1 + 4 + 8) which is 18. 
+And sum of nodes at even level is (2 + 6 + 3 + 7 + 9) which is 27. The output for following tree should be 18 – 27 which is -9.
+
+      5
+    /   \
+   2     6
+ /  \     \  
+1    4     8
+    /     / \ 
+   3     7   9  
+_____________________________________________________________________________________________________________________________________
+Print ancestors of a given binary tree node without recursion
+Given a Binary Tree and a key, write a function that prints all the ancestors of the key in the given binary tree.
+
+For example, consider the following Binary Tree
+
+            1
+        /       \
+       2         3
+     /   \     /   \
+    4     5    6    7 
+   /       \       /
+  8         9     10  
+Following are different input keys and their ancestors in the above tree
+
+Input Key    List of Ancestors 
+-------------------------
+ 1            
+ 2            1
+ 3            1
+ 4            2 1
+ 5            2 1
+ 6            3 1
+ 7            3 1
+ 8            4 2 1
+ 9            5 2 1
+10            7 3 1
+_____________________________________________________________________________________________________________________________________
+Convert a given Binary Tree to Doubly Linked List | Set 2
+Given a Binary Tree (BT), convert it to a Doubly Linked List(DLL). 
+The left and right pointers in nodes are to be used as previous and next pointers respectively in converted DLL. 
+The order of nodes in DLL must be same as Inorder of the given Binary Tree. The first node of Inorder traversal
+ (left most node in BT) must be head node of the DLL.
+_____________________________________________________________________________________________________________________________________
+Check for Identical BSTs without building the trees
+Given two arrays which represent a sequence of keys. Imagine we make a Binary Search Tree (BST) from each array. 
+We need to tell whether two BSTs will be identical or not without actually constructing the tree.
+_____________________________________________________________________________________________________________________________________
+Custom Tree Problem
+You are given a set of links, e.g.
+
+a ---> b
+b ---> c
+b ---> d
+a ---> e 
+Print the tree that would form when each pair of these links that has the same character as start 
+and end point is joined together. You have to maintain fidelity w.r.t. the height of nodes, i.e. 
+nodes at height n from root should be printed at same row or column. For set of links given above, tree printed should be –
+
+-->a
+   |-->b
+   |   |-->c
+   |   |-->d
+   |-->e
+Note that these links need not form a single tree; they could form, ahem, a forest. Consider the following links
+
+a ---> b
+a ---> g
+b ---> c
+c ---> d
+d ---> e
+c ---> f
+z ---> y
+y ---> x
+x ---> w
+The output would be following forest.
+
+-->a
+   |-->b
+   |   |-->c
+   |   |   |-->d
+   |   |   |   |-->e
+   |   |   |-->f
+   |-->g
+
+-->z
+   |-->y
+   |   |-->x
+   |   |   |-->w
+You can assume that given links can form a tree or forest of trees only, and there are no duplicates among links.
+_____________________________________________________________________________________________________________________________________
+Iterative Method to find Height of Binary Tree
+_____________________________________________________________________________________________________________________________________
+Find all possible interpretations of an array of digits
+Consider a coding system for alphabets to integers where ‘a’ is represented as 1, ‘b’ as 2, .. ‘z’ as 26. Given an array of digits (1 to 9) as input, write a function that prints all valid interpretations of input array.
+
+Examples
+
+Input: {1, 1}
+Output: ("aa", 'k") 
+[2 interpretations: aa(1, 1), k(11)]
+
+Input: {1, 2, 1}
+Output: ("aba", "au", "la") 
+[3 interpretations: aba(1,2,1), au(1,21), la(12,1)]
+
+Input: {9, 1, 8}
+Output: {"iah", "ir"} 
+[2 interpretations: iah(9,1,8), ir(9,18)]
+Please note we cannot change order of array. That means {1,2,1} cannot become {2,1,1}
+On first look it looks like a problem of permutation/combination. But on closer look you will figure 
+out that this is an interesting tree problem.
+The idea here is string can take at-most two paths:
+1. Proces single digit
+2. Process two digits
+That means we can use binary tree here. Processing with single digit will be left child and two digits will be right child. 
+If value two digits is greater than 26 then our right child will be null as we don’t have alphabet for greater than 26.
+
+Let’s understand with an example .Array a = {1,2,1}. Below diagram shows that how our tree grows.
+
+                           “” {1,2,1}            Codes used in tree
+                       /             \               "a" --> 1
+                      /               \              "b" --> 2 
+                  "a"{2,1}            "l"{1}         "l" --> 12
+                 /        \          /     \
+                /          \        /       \
+            "ab"{1}        "au"    "la"      null
+             /    \
+            /      \
+         "aba"      null
+Braces {} contain array still pending for processing. Note that with every level, our array size decreases. 
+If you will see carefully, it is not hard to find that tree height is always n (array size)
+How to print all strings (interpretations)? Output strings are leaf node of tree. i.e for {1,2,1}, output is {aba au la}.
+We can conclude that there are mainly two steps to print all interpretations of given integer array.
+_____________________________________________________________________________________________________________________________________
+Tree Isomorphism Problem
+Write a function to detect if two trees are isomorphic. Two trees are called isomorphic if one of them can be obtained 
+from other by a series of flips, i.e. by swapping left and right children of a number of nodes. 
+Any number of nodes at any level can have their children swapped. Two empty trees are isomorphic.
+
+For example, following two trees are isomorphic with following sub-trees flipped: 2 and 3, NULL and 6, 7 and 8.
+_____________________________________________________________________________________________________________________________________
+Longest prefix matching – A Trie based solution in Java
+Given a dictionary of words and an input string, find the longest prefix of the string which is also a word in dictionary.
+
+Examples:
+
+Let the dictionary contains the following words:
+{are, area, base, cat, cater, children, basement}
+
+Below are some input/output examples:
+--------------------------------------
+Input String            Output
+--------------------------------------
+caterer                 cater
+basemexy                base
+child                   < Empty >
+_____________________________________________________________________________________________________________________________________
+Convert a given Binary Tree to Doubly Linked List | Set 1
+Given a Binary Tree (Bt), convert it to a Doubly Linked List(DLL). The left and right pointers in nodes are to be used as 
+previous and next pointers respectively in converted DLL. The order of nodes in DLL must be same as Inorder of the given Binary Tree. 
+The first node of Inorder traversal (left most node in BT) must be head node of the DLL.
+_____________________________________________________________________________________________________________________________________
+_____________________________________________________________________________________________________________________________________
+_____________________________________________________________________________________________________________________________________
+_____________________________________________________________________________________________________________________________________
+_____________________________________________________________________________________________________________________________________
+
