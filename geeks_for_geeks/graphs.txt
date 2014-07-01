@@ -1,13 +1,159 @@
 GRAPHS:
+Channel Assignment Problem
+There are M transmitter and N receiver stations. Given a matrix that keeps track of the number of packets to be transmitted from a
+ given transmitter to a receiver. If the (i; j)-th entry of the matrix is k, it means at that time the station i has k packets for 
+transmission to station j.
+During a time slot, a transmitter can send only one packet and a receiver can receive only one packet.
+ Find the channel assignments so that maximum number of packets are transferred from transmitters to receivers during the next time slot.
+Example:
+
+0 2 0
+3 0 1
+2 4 0
+The above is the input format. We call the above matrix M. Each value M[i; j] represents the number of packets Transmitter ‘i’ has to send to Receiver ‘j’. The output should be:
+
+The number of maximum packets sent in the time slot is 3
+T1 -> R2
+T2 -> R3
+T3 -> R1 
+Note that the maximum number of packets that can be transferred in any slot is min(M, N).
+-------------------------------------------------------------------------------------------------------------------
+
 *Given a directed weighted graph. You are also given the shortest path from a source vertex ‘s’ to a destination vertex ‘t’.
 If weight of every edge is increased by 10 units, does the shortest path remain same in the modified graph?
 
 *This is similar to above question. Does the shortest path change when weights of all edges are multiplied by 10?
 
-* Given a directed graph where every edge has weight as either 1 or 2, find the shortest path from a given source vertex ‘s’ to a given destination vertex ‘t’. Expected time complexity is O(V+E).
+* Given a directed graph where every edge has weight as either 1 or 2, find the shortest path from a given source vertex ‘s’ 
+to a given destination vertex ‘t’. Expected time complexity is O(V+E).
 
 *Given a directed acyclic weighted graph, how to find the shortest path from a source s to a destination t in O(V+E) time?
 
-*Given a directed graph, find out whether the graph is strongly connected or not. A directed graph is strongly connected if there is a path between any two pair of vertices. For example, following is a strongly connected graph.
+*Given a directed graph, find out whether the graph is strongly connected or not. A directed graph is strongly connected if
+ there is a path between any two pair of vertices. For example, following is a strongly connected graph.
+-----------------------------------------------------------------------------------------------------------------------------------
+Graph Coloring | Set 2 (Greedy Algorithm)
+We introduced graph coloring and applications in previous post. As discussed in the previous post, graph coloring is widely used. 
+Unfortunately, there is no efficient algorithm available for coloring a graph with minimum number of 
+colors as the problem is a known NP Complete problem. There are approximate algorithms to solve the problem though.
+-----------------------------------------------------------------------------------------------------------------------------------
+Johnson’s algorithm for All-pairs shortest paths
+The problem is to find shortest paths between every pair of vertices in a given weighted directed Graph and 
+weights may be negative. We have discussed Floyd Warshall Algorithm for this problem. Time complexity of 
+Floyd Warshall Algorithm is (V3). Using Johnson’s algorithm, we can find all pair shortest paths in O(V2log V + VE) time.
+ Johnson’s algorithm uses both Dijkstra and Bellman-Ford as subroutines.
+-----------------------------------------------------------------------------------------------------------------------------------
+Travelling Salesman Problem | Set 2 (Approximate using MST)
+-----------------------------------------------------------------------------------------------------------------------------------
+Travelling Salesman Problem | Set 1 (Naive and Dynamic Programming)
+-----------------------------------------------------------------------------------------------------------------------------------
+Detect cycle in an undirected graph
+-----------------------------------------------------------------------------------------------------------------------------------
+Find maximum number of edge disjoint paths between two vertices
+-----------------------------------------------------------------------------------------------------------------------------------
+Longest Path in a Directed Acyclic Graph
+Given a Weighted Directed Acyclic Graph (DAG) and a source vertex s in it, find the longest distances from s to all other vertices in the given graph.
+-----------------------------------------------------------------------------------------------------------------------------------
+Fleury’s Algorithm for printing Eulerian Path or Circuit
+-----------------------------------------------------------------------------------------------------------------------------------
+Find minimum s-t cut in a flow network
+-----------------------------------------------------------------------------------------------------------------------------------
+Maximum Bipartite Matching
+-----------------------------------------------------------------------------------------------------------------------------------
+Ford-Fulkerson Algorithm for Maximum Flow Problem
+Given a graph which represents a flow network where every edge has a capacity. Also given two vertices source ‘s’ and sink ‘t’ in the graph, find the maximum possible flow from s to t with following constraints:
 
+a) Flow on an edge doesn’t exceed the given capacity of the edge.
+
+b) Incoming flow is equal to outgoing flow for every vertex except s and t.
+-----------------------------------------------------------------------------------------------------------------------------------
+Eulerian path and circuit
+-----------------------------------------------------------------------------------------------------------------------------------
+Connectivity in a directed graph
+Given a directed graph, find out whether the graph is strongly connected or not. 
+A directed graph is strongly connected if there is a path between any two pair of vertices
+-----------------------------------------------------------------------------------------------------------------------------------
+Biconnected graph
+An undirected graph is called Biconnected if there are two vertex-disjoint paths between any two vertices. In a Biconnected Graph, 
+there is a simple cycle through any two vertices.
+By convention, two nodes connected by an edge form a biconnected graph, but this does not verify the above properties. 
+For a graph with more than two vertices, the above properties must be there for it to be Biconnected.
+-----------------------------------------------------------------------------------------------------------------------------------
+Bridges in a graph
+An edge in an undirected connected graph is a bridge iff removing it disconnects the graph. 
+For a disconnected undirected graph, definition is similar, a bridge is an edge removing which increases number of connected components.
+-----------------------------------------------------------------------------------------------------------------------------------
+Articulation Points (or Cut Vertices) in a Graph
+-----------------------------------------------------------------------------------------------------------------------------------
+Strongly Connected Components
+-----------------------------------------------------------------------------------------------------------------------------------
+Shortest Path in Directed Acyclic Graph
+Given a Weighted Directed Acyclic Graph and a source vertex in the graph, find the shortest paths from given source to all other vertices.
+-----------------------------------------------------------------------------------------------------------------------------------
+Topological Sorting
+Topological sorting for Directed Acyclic Graph (DAG) is a linear ordering of vertices such that for every directed edge uv, 
+vertex u comes before v in the ordering. Topological Sorting for a graph is not possible if the graph is not a DAG.
+-----------------------------------------------------------------------------------------------------------------------------------
+Check whether a given graph is Bipartite or not
+A Bipartite Graph is a graph whose vertices can be divided into two independent sets, U and V such that 
+every edge (u, v) either connects a vertex from U to V or a vertex from V to U. In other words, for every edge (u, v),
+either u belongs to U and v to V, or u belongs to V and v to U. We can also say that there is no edge that connects vertices of same set.
+-----------------------------------------------------------------------------------------------------------------------------------
+Transitive closure of a graph
+Given a directed graph, find out if a vertex j is reachable from another vertex i for all vertex pairs (i, j) in the given graph.
+ Here reachable mean that there is a path from vertex i to j. The reach-ability matrix is called transitive closure of a graph.
+-----------------------------------------------------------------------------------------------------------------------------------
+Dynamic Programming | Set 23 (Bellman–Ford Algorithm)
+Given a graph and a source vertex src in graph, find shortest paths from src to all vertices in the given graph.
+ The graph may contain negative weight edges.
+-----------------------------------------------------------------------------------------------------------------------------------
+Greedy Algorithms | Set 8 (Dijkstra’s Algorithm for Adjacency List Representation)
+-----------------------------------------------------------------------------------------------------------------------------------
+Greedy Algorithms | Set 7 (Dijkstra’s shortest path algorithm)
+Given a graph and a source vertex in graph, find shortest paths from source to all vertices in the given graph.
+-----------------------------------------------------------------------------------------------------------------------------------
+Greedy Algorithms | Set 6 (Prim’s MST for Adjacency List Representation)
+-----------------------------------------------------------------------------------------------------------------------------------
+Greedy Algorithms | Set 5 (Prim’s Minimum Spanning Tree (MST))
+-----------------------------------------------------------------------------------------------------------------------------------
+Greedy Algorithms | Set 2 (Kruskal’s Minimum Spanning Tree Algorithm)
+-----------------------------------------------------------------------------------------------------------------------------------
+Union-Find Algorithm | Set 2 (Union By Rank and Path Compression)
+-----------------------------------------------------------------------------------------------------------------------------------
+Find the number of islands
+Given a boolean 2D matrix, find the number of islands.
+
+This is an variation of the standard problem: “Counting number of connected components in a undirected graph”.
+-----------------------------------------------------------------------------------------------------------------------------------
+Dynamic Programming | Set 16 (Floyd Warshall Algorithm)
+The Floyd Warshall Algorithm is for solving the All Pairs Shortest Path problem. 
+The problem is to find shortest distances between every pair of vertices in a given edge weighted directed Graph.
+-----------------------------------------------------------------------------------------------------------------------------------
+Backtracking | Set 6 (Hamiltonian Cycle)
+Hamiltonian Path in an undirected graph is a path that visits each vertex exactly once. A Hamiltonian cycle 
+(or Hamiltonian circuit) is a Hamiltonian Path such that there is an edge (in graph) from the last vertex to the 
+first vertex of the Hamiltonian Path. Determine whether a given graph contains Hamiltonian Cycle or not.
+ If it contains, then print the path. Following are the input and output of the required function.
+-----------------------------------------------------------------------------------------------------------------------------------
+Find if there is a path between two vertices in a directed graph
+-----------------------------------------------------------------------------------------------------------------------------------
+Detect Cycle in a Directed Graph
+Given a directed graph, check whether the graph contains a cycle or not. Your function should return true if 
+the given graph contains at least one cycle, else return false. For example, the following graph contains three
+ cycles 0->2->0, 0->1->2->0 and 3->3, so your function must return true.
+-----------------------------------------------------------------------------------------------------------------------------------
+Breadth First Traversal for a Graph Depth First Traversal for a Graph
+-----------------------------------------------------------------------------------------------------------------------------------
+Applications of Minimum Spanning Tree Problem
+-----------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------
 
