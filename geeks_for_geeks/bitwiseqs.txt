@@ -1,3 +1,9 @@
+Check if binary representation of a number is palindrome
+------------------------------------------------------------------------
+Swap two nibbles in a byte
+------------------------------------------------------------------------
+How to turn off a particular bit in a number?
+------------------------------------------------------------------------
 Check if a number is multiple of 9 using bitwise operators
 ------------------------------------------------------------------------
 How to swap two numbers without using a temporary variable?
