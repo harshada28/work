@@ -503,8 +503,379 @@ Given a Binary Tree (Bt), convert it to a Doubly Linked List(DLL). The left and 
 previous and next pointers respectively in converted DLL. The order of nodes in DLL must be same as Inorder of the given Binary Tree. 
 The first node of Inorder traversal (left most node in BT) must be head node of the DLL.
 _____________________________________________________________________________________________________________________________________
+Remove BST keys outside the given range
+Given a Binary Search Tree (BST) and a range [min, max], remove all keys which are outside the given range. 
+The modified tree should also be BST. For example, consider the following BST and range [-10, 13]. 
+_____________________________________________________________________________________________________________________________________
+Construct Complete Binary Tree from its Linked List Representation
+Given Linked List Representation of Complete Binary Tree, construct the Binary tree. A complete binary tree can be 
+represented in an array in the following approach.
+
+If root node is stored at index i, its left, and right children are stored at indices 2*i+1, 2*i+2 respectively.
+Suppose tree is represented by a linked list in same way, how do we convert this into normal linked representation of binary 
+tree where every node has data, left and right pointers? In the linked list representation, we cannot directly access the children of 
+the current node unless we traverse the list.
+_____________________________________________________________________________________________________________________________________
+Reverse Level Order Traversal
+We have discussed level order traversal of a post in previous post. The idea is to print last level first, 
+then second last level, and so on. Like Level order traversal, every level is printed from left to right.
+_____________________________________________________________________________________________________________________________________
+Find a pair with given sum in a Balanced BST
+Given a Balanced Binary Search Tree and a target sum, write a function that returns true if there is a pair with sum 
+equals to target sum, otherwise return false. Expected time complexity is O(n) and only O(Logn) extra space can be used. 
+Any modification to Binary Search Tree is not allowed. Note that height of a Balanced BST is always O(Logn).
+_____________________________________________________________________________________________________________________________________
+Find if there is a triplet in a Balanced BST that adds to zero
+Given a Balanced Binary Search Tree (BST), write a function isTripletPresent() that returns true if there is a triplet in given BST 
+with sum equals to 0, otherwise returns false. Expected time complexity is O(n^2) and only O(Logn) extra space can be used.
+ You can modify given Binary Search Tree. Note that height of a Balanced BST is always O(Logn)
+For example, isTripletPresent() should return true for following BST because there is a triplet with sum 0, the triplet is {-13, 6, 7}.
+_____________________________________________________________________________________________________________________________________
+
+Iterative Postorder Traversal | Set 2 (Using One Stack)
+We have discussed a simple iterative postorder traversal using two stacks in the previous post. In this post, 
+an approach with only one stack is discussed.
+
+The idea is to move down to leftmost node using left pointer. While moving down, push root and root’s right child to stack. 
+Once we reach leftmost node, print it if it doesn’t have a right child. If it has a right child, then change root so that the
+ right child is processed before.
+_____________________________________________________________________________________________________________________________________
+Iterative Postorder Traversal | Set 1 (Using Two Stacks)
+We have discussed iterative inorder and iterative preorder traversals. In this post, iterative postorder traversal is discussed which is
+ more complex than the other two traversals (due to its nature of non-tail recursion, there is an extra statement after 
+the final recursive call to itself).
+ The postorder traversal can easily be done using two stacks though. The idea is to push reverse postorder traversal to a stack.
+ Once we have reverse postorder traversal in a stack, we can just pop all items one by one from the stack and print them, this order 
+of printing will be in postorder because of LIFO property of stacks. Now the question is, how to get reverse post order elements in a 
+stack – the other stack is used for this purpose. For example, in the following tree, we need to get 1, 3, 7, 6, 2, 5, 4 in a stack. 
+If take a closer look at this sequence, 
+we can observe that this sequence is very similar to preorder traversal. The only difference is right child is visited before left child 
+and therefore sequence is “root right left” instead of “root left right”. So we can do something like iterative preorder traversal 
+with following differences.
+a) Instead of printing an item, we push it to a stack.
+b) We push left subtree before right subtree.
+_____________________________________________________________________________________________________________________________________
+Dynamic Programming | Set 26 (Largest Independent Set Problem)
+Given a Binary Tree, find size of the Largest Independent Set(LIS) in it. A subset of all tree nodes is an independent 
+set if there is no edge between any two nodes of the subset.
+For example, consider the following binary tree. The largest independent set(LIS) is {10, 40, 60, 70, 80} and size of the LIS is 5.
+_____________________________________________________________________________________________________________________________________
+Segment Tree | Set 2 (Range Minimum Query)
+We have introduced segment tree with a simple example in the previous post. In this post, Range Minimum Query 
+problem is discussed as another example where Segment Tree can be used. Following is problem statement.
+
+We have an array arr[0 . . . n-1]. We should be able to efficiently find the minimum value from index qs (query start) to qe 
+(query end) where 0 <= qs <= qe <= n-1. The array is static (elements are not deleted and inserted during the series of queries).
+_____________________________________________________________________________________________________________________________________
+Segment Tree | Set 1 (Sum of given range)
+Let us consider the following problem to understand Segment Trees.
+
+We have an array arr[0 . . . n-1]. We should be able to
+1 Find the sum of elements from index l to r where 0 <= l <= r <= n-1
+2 Change value of a specified element of the array arr[i] = x where 0 <= i <= n-1.
+_____________________________________________________________________________________________________________________________________
+Ternary Search Tree
+A ternary search tree is a special trie data structure where the child nodes of a standard trie are ordered as a binary search tree.
+_____________________________________________________________________________________________________________________________________
+Linked complete binary tree & its creation
+A complete binary tree is a binary tree where each level ‘l’ except the last has 2^l nodes and the nodes at 
+the last level are all left aligned. Complete binary trees are mainly used in heap based data structures.
+The nodes in the complete binary tree are inserted from left to right in one level at a time. If a level is full, 
+the node is inserted in a new level.
+_____________________________________________________________________________________________________________________________________
+Morris traversal for Preorder
+Using Morris Traversal, we can traverse the tree without using stack and recursion. The algorithm for Preorder is 
+almost similar to Morris traversal for Inorder.
+
+1...If left child is null, print the current node data. Move to right child.
+….Else, Make the right child of the inorder predecessor point to the current node. Two cases arise:
+………a) The right child of the inorder predecessor already points to the current node. Set right child to NULL.
+ Move to right child of current node.
+………b) The right child is NULL. Set it to current node. Print current node’s data and move to left child of current node.
+2...Iterate until current node is not NULL.
+_____________________________________________________________________________________________________________________________________
+Convert a BST to a Binary Tree such that sum of all greater keys is added to every key
+Given a Binary Search Tree (BST), convert it to a Binary Tree such that every key of the original BST is changed to 
+key plus sum of all greater keys in BST.
+_____________________________________________________________________________________________________________________________________
+Iterative Preorder Traversal
+Given a Binary Tree, write an iterative function to print Preorder traversal of the given binary tree.
+_____________________________________________________________________________________________________________________________________
+Floor and Ceil from a BST
+There are numerous applications we need to find floor (ceil) value of a key in a binary search tree or sorted array. 
+For example, consider designing memory management system in which free nodes are arranged in BST. Find best fit for the input request.
+
+Ceil Value Node: Node with smallest data larger than or equal to key value.
+_____________________________________________________________________________________________________________________________________
+Construct BST from given preorder traversal | Set 2
+Given preorder traversal of a binary search tree, construct the BST.
+_____________________________________________________________________________________________________________________________________
+Construct BST from given preorder traversal | Set 1
+Given preorder traversal of a binary search tree, construct the BST.
+
+For example, if the given traversal is {10, 5, 1, 7, 40, 50}, then the output should be root of following tree.
+_____________________________________________________________________________________________________________________________________
+Construct Full Binary Tree from given preorder and postorder traversals
+Given two arrays that represent preorder and postorder traversals of a full binary tree, construct the binary tree.
+_____________________________________________________________________________________________________________________________________
+Two nodes of a BST are swapped, correct the BST
+Two of the nodes of a Binary Search Tree (BST) are swapped. Fix (or correct) the BST.
+_____________________________________________________________________________________________________________________________________
+Boundary Traversal of binary tree
+Given a binary tree, print boundary nodes of the binary tree Anti-Clockwise starting from the root. For example, 
+boundary traversal of the following tree is “20 8 4 10 14 25 22″
+_____________________________________________________________________________________________________________________________________
+Check whether a given Binary Tree is Complete or not
+_____________________________________________________________________________________________________________________________________
+Check if each internal node of a BST has exactly one child
+Given Preorder traversal of a BST, check if each non-leaf node has only one child. Assume that the BST contains unique entries.
+_____________________________________________________________________________________________________________________________________
+Construct a special tree from given preorder traversal
+Given an array ‘pre[]‘ that represents Preorder traversal of a spacial binary tree where every node has either 0 or 2 children.
+ One more array ‘preLN[]‘ is given which has only two possible values ‘L’ and ‘N’. The value ‘L’ in ‘preLN[]‘ indicates that 
+the corresponding node in Binary Tree is a leaf node and value ‘N’ indicates that the corresponding node is non-leaf node. 
+Write a function to construct the tree from the given two arrays.
+_____________________________________________________________________________________________________________________________________
+Construct Special Binary Tree from given Inorder traversal
+Given Inorder Traversal of a Special Binary Tree in which key of every node is greater than keys 
+in left and right children, construct the Binary Tree and return root.
+_____________________________________________________________________________________________________________________________________
+Binary Tree to Binary Search Tree Conversion
+Given a Binary Tree, convert it to a Binary Search Tree. The conversion must be done in such a way that
+ keeps the original structure of Binary Tree.
+_____________________________________________________________________________________________________________________________________
+Merge two BSTs with limited extra space
+Given two Binary Search Trees(BST), print the elements of both BSTs in sorted form. 
+The expected time complexity is O(m+n) where m is the number of nodes in first tree and n is the number of nodes in second tree.
+ Maximum allowed auxiliary space is O(height of the first tree + height of the second tree).
+_____________________________________________________________________________________________________________________________________
+Find the maximum sum leaf to root path in a Binary Tree
+Given a Binary Tree, find the maximum sum path from a leaf to root. For example, in the following tree, there are three leaf 
+to root paths 8->-2->10, -4->-2->10 and 7->10. The sums of these three paths are 16, 4 and 17 respectively. 
+The maximum of them is 17 and the path for maximum is 7->10.
 _____________________________________________________________________________________________________________________________________
 _____________________________________________________________________________________________________________________________________
+Page 6
+_____________________________________________________________________________________________________________________________________
+
+Merge Two Balanced Binary Search Trees
+You are given two balanced binary search trees e.g., AVL or Red Black Tree. Write a function that merges the two given
+ balanced BSTs into a balanced binary search tree. Let there be m elements in first tree and n elements in the other tree. 
+Your merge function should take O(m+n) time.
+_____________________________________________________________________________________________________________________________________
+Vertical Sum in a given Binary Tree
+Given a Binary Tree, find vertical sum of the nodes that are in same vertical line. Print all sums through different vertical lines.
+_____________________________________________________________________________________________________________________________________
+Find the largest BST subtree in a given Binary Tree
+Given a Binary Tree, write a function that returns the size of the largest subtree which is also a Binary Search Tree (BST). 
+If the complete Binary Tree is BST, then return the size of whole tree.
+_____________________________________________________________________________________________________________________________________
+Convert a given tree to its Sum Tree
+Given a Binary Tree where each node has positive and negative values.
+ Convert this to a tree where each node contains the sum of the left and right sub trees in the original tree. 
+The values of leaf nodes are changed to 0.
+_____________________________________________________________________________________________________________________________________
+Populate Inorder Successor for all nodes
+Given a Binary Tree where each node has following structure, write a function to populate next pointer for all nodes. 
+The next pointer for every node should be set to point to inorder successor.
+
+struct node
+{
+  int data;
+  struct node* left;
+  struct node* right;
+  struct node* next;
+}
+Initially, all next pointers have NULL values. Your function should fill these next pointers so that they point to inorder successor.
+_____________________________________________________________________________________________________________________________________
+Sorted Array to Balanced BST
+Given a sorted array. Write a function that creates a Balanced Binary Search Tree using array elements.
+_____________________________________________________________________________________________________________________________________
+Connect nodes at same level using constant extra space
+Write a function to connect all the adjacent nodes at the same level in a binary tree. Structure of the given 
+Binary Tree node is like following.
+
+struct node {
+  int data;
+  struct node* left;
+  struct node* right;
+  struct node* nextRight;
+}
+Initially, all the nextRight pointers point to garbage values. Your function should set these pointers to point
+ next right for each node. You can use only constant extra space.
+_____________________________________________________________________________________________________________________________________
+Connect nodes at same level
+Write a function to connect all the adjacent nodes at the same level in a binary tree. Structure of the given 
+Binary Tree node is like following.
+
+struct node{
+  int data;
+  struct node* left;
+  struct node* right;
+  struct node* nextRight;  
+}
+Initially, all the nextRight pointers point to garbage values. Your function should set these pointers to point next right for each node.
+_____________________________________________________________________________________________________________________________________
+Check if a binary tree is subtree of another binary tree
+Given two binary trees, check if the first tree is subtree of the second one. A subtree of a tree T is a 
+tree S consisting of a node in T and all of its descendants in T. The subtree corresponding to the root node 
+is the entire tree; the subtree corresponding to any other node is called a proper subtree.
+_____________________________________________________________________________________________________________________________________
+Decision Trees – Fake (Counterfeit) Coin Puzzle (12 Coin Puzzle)
 _____________________________________________________________________________________________________________________________________
 _____________________________________________________________________________________________________________________________________
+Page 7
+_____________________________________________________________________________________________________________________________________
+Check if a given Binary Tree is SumTree
+Write a function that returns true if the given Binary Tree is SumTree else false. A SumTree is a Binary Tree 
+where the value of a node is equal to sum of the nodes present in its left subtree and right subtree. 
+An empty tree is SumTree and sum of an empty tree can be considered as 0. A leaf node is also considered as SumTre
+_____________________________________________________________________________________________________________________________________
+Tournament Tree (Winner Tree) and Binary Heap
+Given a team of N players. How many minimum games are required to find second best player?
+
+We can use adversary arguments based on tournament tree (Binary Heap).
+_____________________________________________________________________________________________________________________________________
+Print BST keys in the given range
+Given two values k1 and k2 (where k1 < k2) and a root pointer to a Binary Search Tree. 
+Print all the keys of tree in range k1 to k2. i.e. print all x such that k1<=x<=k2 and x is a key of given BST. Print all the keys in increasing order.
+
+For example, if k1 = 10 and k2 = 22, then your function should print 12, 20 and 22.
+_____________________________________________________________________________________________________________________________________
+Print Ancestors of a given node in Binary Tree
+Given a Binary Tree and a key, write a function that prints all the ancestors of the key in the given binary tree.
+
+For example, if the given tree is following Binary Tree and key is 7, then your function should print 4, 2 and 1
+_____________________________________________________________________________________________________________________________________
+Get Level of a node in a Binary Tree
+Given a Binary Tree and a key, write a function that returns level of the key.
+
+For example, consider the following tree. If the input key is 3, then your function should return 1. 
+If the input key is 4, then your function should return 3. And for key which is not present in key, then your function should return 0.
+_____________________________________________________________________________________________________________________________________
+Find k-th smallest element in BST (Order Statistics in BST)
+Given root of binary search tree and K as input, find K-th smallest element in BST.
+
+For example, in the following BST, if k = 3, then output should be 10, and if k = 5, then output should be 14.
+_____________________________________________________________________________________________________________________________________
+Inorder Successor in Binary Search Tree
+In Binary Tree, Inorder successor of a node is the next node in Inorder traversal of the Binary Tree. Inorder Successor is NULL for the 
+last node in Inoorder traversal.
+In Binary Search Tree, Inorder Successor of an input node can also be defined as the node with the smallest key greater than the key of input node. 
+So, it is sometimes important to find next node in sorted order.
+_____________________________________________________________________________________________________________________________________
+Sorted order printing of a given array that represents a BST
+Given an array that stores a complete Binary Search Tree, write a function that efficiently prints the given array in ascending order.
+
+For example, given an array [4, 2, 5, 1, 3], the function should print 1, 2, 3, 4, 5
+_____________________________________________________________________________________________________________________________________
+Print nodes at k distance from root
+Given a root of a tree, and an integer k. Print all the nodes which are at k distance from root.
+_____________________________________________________________________________________________________________________________________
+Foldable Binary Trees
+Question: Given a binary tree, find out if the tree can be folded or not.
+
+A tree can be folded if left and right subtrees of the tree are structure wise mirror image of each other. An empty tree is considered as foldable.
+_____________________________________________________________________________________________________________________________________
+Maximum width of a binary tree
+Given a binary tree, write a function to get the maximum width of the given tree. Width of a tree is maximum of widths of all levels.
+_____________________________________________________________________________________________________________________________________
+Double Tree
+Write a program that converts a given tree to its Double tree. To create Double tree of the given tree, create a new duplicate for each node, and insert the duplicate as the left child of the original node.
+
+So the tree…
+
+    2
+   / \
+  1   3
+is changed to…
+
+       2
+      / \
+     2   3
+    /   /
+   1   3
+  /
+ 1
+And the tree
+
+            1
+          /   \
+        2      3
+      /  \
+    4     5
+is changed to
+
+               1
+             /   \
+           1      3
+          /      /
+        2       3
+      /  \
+     2    5
+    /    /
+   4   5
+  /   
+ 4
+_____________________________________________________________________________________________________________________________________
+_____________________________________________________________________________________________________________________________________
+Page 8
+_____________________________________________________________________________________________________________________________________
+Given a binary tree, print all root-to-leaf paths
+_____________________________________________________________________________________________________________________________________
+Construct Tree from given Inorder and Preorder traversals
+_____________________________________________________________________________________________________________________________________
+Root to leaf path sum equal to a given number
+Given a binary tree and a number, return true if the tree has a root-to-leaf path such that adding up all the 
+values along the path equals the given number. Return false if no such path can be found.
+_____________________________________________________________________________________________________________________________________
+Inorder Tree Traversal without recursion and without stack!_____________________________________________________________________________________________________________________________________
+Inorder Tree Traversal without Recursion
+_____________________________________________________________________________________________________________________________________
+How to determine if a binary tree is height-balanced?
+A tree where no leaf is much farther away from the root than any other leaf. Different balancing 
+schemes allow different definitions of “much farther” and different amounts of work to keep them balanced.
+_____________________________________________________________________________________________________________________________________
+Diameter of a Binary Tree
+The diameter of a tree (sometimes called the width) is the number of nodes on the longest path between two leaves in the tree. 
+The diagram below shows two trees each with diameter nine, the leaves that form the ends of a longest path are shaded
+ (note that there is more than one path in each tree of length nine, but no path longer than nine nodes).
+_____________________________________________________________________________________________________________________________________
+Convert an arbitrary Binary Tree to a tree that holds Children Sum Property
+_____________________________________________________________________________________________________________________________________
+Check for Children Sum Property in a Binary Tree.
+Given a binary tree, write a function that returns true if the tree satisfies below property.
+_____________________________________________________________________________________________________________________________________
+Level order traversal in spiral form _____________________________________________________________________________________________________________________________________
+A program to check if a binary tree is BST or not
+_____________________________________________________________________________________________________________________________________
+Program to count leaf nodes in a binary tree
+_____________________________________________________________________________________________________________________________________
+Level Order Tree Traversal
+_____________________________________________________________________________________________________________________________________
+Find the node with minimum value in a Binary Search Tree
+_____________________________________________________________________________________________________________________________________
+Page 9
+_____________________________________________________________________________________________________________________________________
+The Great Tree-List Recursion Problem.
+_____________________________________________________________________________________________________________________________________
+Lowest Common Ancestor in a Binary Search Tree.
+_____________________________________________________________________________________________________________________________________
+Given a binary tree, print out all of its root-to-leaf paths one per line.
+_____________________________________________________________________________________________________________________________________
+Write an Efficient C Function to Convert a Binary Tree into its Mirror Tree
+_____________________________________________________________________________________________________________________________________
+Write a C program to Delete a Tree.
+_____________________________________________________________________________________________________________________________________
+Write a C Program to Find the Maximum Depth or Height of a Tree
+_____________________________________________________________________________________________________________________________________
+Write C Code to Determine if Two Trees are Identical
+_____________________________________________________________________________________________________________________________________
+
+Write a C program to Calculate Size of a tree Size of a tree is the number of elements present in the tree.
+_____________________________________________________________________________________________________________________________________
+Tree Traversals
+_____________________________________________________________________________________________________________________________________
+
+
 
