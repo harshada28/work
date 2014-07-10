@@ -1,0 +1,157 @@
+Given a linked list, reverse alternate nodes and append at the end.  Extra allowed space is O(1) 
+---------------------------------------------------------------------------------------------
+Pairwise swap elements of a given linked list by changing links
+Given a singly linked list, write a function to swap elements pairwise. For example, if the linked list is 
+1->2->3->4->5->6->7 then the function should change it to 2->1->4->3->6->5->7, and 
+if the linked list is 1->2->3->4->5->6 then the function should change it to 2->1->4->3->6->5
+---------------------------------------------------------------------------------------------
+Self Organizing List | Set 1 (Introduction)
+The worst case search time for a sorted linked list is O(n). With a Balanced Binary Search Tree, we can skip almost half of the nodes after one comparison with root. For a sorted array, we have random access and we can apply Binary Search on arrays.
+
+One idea to make search faster for Linked Lists is Skip List. Another idea (which is discussed in this post) is to place more frequently accessed items closer to head.. There can be two possibilities. offline (we know the complete search sequence in advance) and online (we don’t know the search sequence).
+In case of offline, we can put the nodes according to decreasing frequencies of search (The element having maximum search count is put first). For many practical applications, it may be difficult to obtain search sequence in advance. A Self Organizing list reorders its nodes based on searches which are done. The idea is to use locality of reference (In a typical database, 80% of the access are to 20% of the items).
+---------------------------------------------------------------------------------------------
+Merge a linked list into another linked list at alternate positions
+Given two linked lists, insert nodes of second list into first list at alternate positions of first list.
+For example, if first list is 5->7->17->13->11 and second is 12->10->2->4->6, the first list should become 5->12->7->10->17->2->13->4->11->6 and second list should become empty. The nodes of second list should only be inserted when there are positions available. For example, if the first list is 1->2->3 and second list is 4->5->6->7->8, then first list should become 1->4->2->5->3->6 and second list to 7->8.
+
+Use of extra space is not allowed (Not allowed to create additional nodes), i.e., insertion must be done in-place. Expected time complexity is O(n) where n is number of nodes in first list.
+---------------------------------------------------------------------------------------------
+QuickSort on Singly Linked List
+QuickSort on Doubly Linked List is discussed here. QuickSort on Singly linked list was given as an exercise. Following is C++ implementation for same. The important things about implementation are, it changes pointers rather swapping data and time complexity is same as the implementation for Doubly Linked List.
+In partition(), we consider last element as pivot. We traverse through the current list and if a node has value greater than pivot, we move it after tail. If the node has smaller value, we keep it at its current position.
+---------------------------------------------------------------------------------------------
+Delete N nodes after M nodes of a linked list
+Given a linked list and two integers M and N. Traverse the linked list such that you retain M nodes then delete next N nodes, continue the same till end of the linked list.
+---------------------------------------------------------------------------------------------
+Design a stack with operations on middle element
+How to implement a stack which will support following operations in O(1) time complexity?
+1) push() which adds an element to the top of stack.
+2) pop() which removes an element from top of stack.
+3) findMiddle() which will return middle element of the stack.
+4) deleteMiddle() which will delete the middle element.
+Push and pop are standard stack operations.
+---------------------------------------------------------------------------------------------
+Swap Kth node from beginning with Kth node from end in a Linked List
+---------------------------------------------------------------------------------------------
+QuickSort on Doubly Linked List
+Following is a typical recursive implementation of QuickSort for arrays. The implementation uses last element as pivot.
+---------------------------------------------------------------------------------------------
+Skip List | Set 1 (Introduction)
+Can we search in a sorted linked list in better than O(n) time?
+The worst case search time for a sorted linked list is O(n) as we can only linearly traverse the list and cannot skip nodes while searching. For a Balanced Binary Search Tree, we skip almost half of the nodes after one comparison with root. For a sorted array, we have random access and we can apply Binary Search on arrays.
+---------------------------------------------------------------------------------------------
+Flatten a multilevel linked list
+Given a linked list where in addition to the next pointer, each node has a child pointer, which may or may not point to a separate list. These child lists may have one or more children of their own, and so on, to produce a multilevel data structure, as shown in below figure.You are given the head of the first level of the list. Flatten the list so that all the nodes appear in a single-level linked list. You need to flatten the list in way that all nodes at first level should come first, then nodes of second level, and so on.
+---------------------------------------------------------------------------------------------
+Sort a linked list of 0s, 1s and 2s
+---------------------------------------------------------------------------------------------
+Add two numbers represented by linked lists | Set 2
+---------------------------------------------------------------------------------------------
+Flattening a Linked List
+Given a linked list where every node represents a linked list and contains two pointers of its type:
+(i) Pointer to next node in the main list (we call it ‘right’ pointer in below code)
+(ii) Pointer to a linked list where this node is head (we call it ‘down’ pointer in below code).
+All linked lists are sorted. See the following exampl
+---------------------------------------------------------------------------------------------
+Implement LRU Cache
+---------------------------------------------------------------------------------------------
+Rotate a Linked List
+---------------------------------------------------------------------------------------------
+Find a triplet from three linked lists with sum equal to a given number
+---------------------------------------------------------------------------------------------
+XOR Linked List – A Memory Efficient Doubly Linked List | Set 2
+---------------------------------------------------------------------------------------------
+Union and Intersection of two Linked Lists
+---------------------------------------------------------------------------------------------
+In-place conversion of Sorted DLL to Balanced BST
+---------------------------------------------------------------------------------------------
+Sorted Linked List to Balanced BST
+---------------------------------------------------------------------------------------------
+Delete a given node in Linked List under given constraints
+---------------------------------------------------------------------------------------------
+How to write C functions that modify head pointer of a Linked List?
+---------------------------------------------------------------------------------------------
+Add two numbers represented by linked lists | Set 1
+---------------------------------------------------------------------------------------------
+XOR Linked List – A Memory Efficient Doubly Linked List | Set 1
+---------------------------------------------------------------------------------------------
+Detect and Remove Loop in a Linked List
+---------------------------------------------------------------------------------------------
+Segregate even and odd nodes in a Linked List
+---------------------------------------------------------------------------------------------
+Delete nodes which have a greater value on right side
+---------------------------------------------------------------------------------------------
+Reverse alternate K nodes in a Singly Linked List
+---------------------------------------------------------------------------------------------
+Sorted insert for circular linked list
+---------------------------------------------------------------------------------------------
+Reverse a Linked List in groups of given size
+Given a linked list, write a function to reverse every k nodes (where k is an input to the function).
+---------------------------------------------------------------------------------------------
+Merge Sort for Linked Lists
+---------------------------------------------------------------------------------------------
+Identical Linked Lists
+Two Linked Lists are identical when they have same data and arrangement of data is also same. For example Linked lists a (1->2->3) and b(1->2->3) are identical. . Write a function to check if the given two linked lists are identical.
+---------------------------------------------------------------------------------------------
+Merge two sorted linked lists
+---------------------------------------------------------------------------------------------
+Alternating split of a given Singly Linked List
+---------------------------------------------------------------------------------------------
+Delete alternate nodes of a Linked List
+Given a Singly Linked List, starting from the second node delete all alternate nodes of it. For example, if the given linked list is 1->2->3->4->5 then your function should convert it to 1->3->5, and if the given linked list is 1->2->3->4 then convert it to 1->3.
+---------------------------------------------------------------------------------------------
+Intersection of two Sorted Linked Lists
+Given two lists sorted in increasing order, create and return a new list representing the intersection of the two lists. The new list should be made with its own memory — the original lists should not be changed.
+---------------------------------------------------------------------------------------------
+Delete a node in a Doubly Linked List
+---------------------------------------------------------------------------------------------
+Pairwise swap elements of a given linked list
+---------------------------------------------------------------------------------------------
+Move last element to front of a given Linked List
+---------------------------------------------------------------------------------------------
+Split a Circular Linked List into two halves
+---------------------------------------------------------------------------------------------
+Reverse a Doubly Linked List
+---------------------------------------------------------------------------------------------
+Remove duplicates from an unsorted linked list
+---------------------------------------------------------------------------------------------
+Remove duplicates from a sorted linked list
+---------------------------------------------------------------------------------------------
+Write a recursive function to print reverse of a Linked List
+---------------------------------------------------------------------------------------------
+Write a function to get the intersection point of two Linked Lists.
+---------------------------------------------------------------------------------------------
+Given a linked list which is sorted, how will you insert in sorted way
+---------------------------------------------------------------------------------------------
+Memory efficient doubly linked list
+Asked by Varun Bhatia.
+
+Question:
+Write a code for implementation of doubly linked list with use of single pointer in each node.
+---------------------------------------------------------------------------------------------
+Copy a linked list with next and arbit pointer
+You are given a Double Link List with one pointer of each node pointing to the next node just like in a single link list. The second pointer however CAN point to any node in the list and not just the previous node. Now write a program in O(n) time to duplicate this list. That is, write a program which will create a copy of this list.
+---------------------------------------------------------------------------------------------
+The Great Tree-List Recursion Problem.
+---------------------------------------------------------------------------------------------
+Function to check if a singly linked list is palindrome
+---------------------------------------------------------------------------------------------
+Write a C function to detect loop in a linked list
+---------------------------------------------------------------------------------------------
+Write a function to reverse a linked list
+---------------------------------------------------------------------------------------------
+Given only a pointer to a node to be deleted in a singly linked list, how do you delete it?
+---------------------------------------------------------------------------------------------
+Write a function that counts the number of times a given int occurs in a Linked List
+---------------------------------------------------------------------------------------------
+Write a function to delete a Linked List
+---------------------------------------------------------------------------------------------
+Nth node from the end of a Linked List
+---------------------------------------------------------------------------------------------
+Write a C function to print the middle of a given linked list
+---------------------------------------------------------------------------------------------
+Given only a pointer to a node to be deleted in a singly linked list, how do you delete it?
+---------------------------------------------------------------------------------------------
+Write a function to get Nth node in a Linked List
+---------------------------------------------------------------------------------------------
