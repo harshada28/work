@@ -1,0 +1,419 @@
+Find next greater number with same set of digits
+Given a number n, find the smallest number that has same set of digits as n and is greater than n.
+If x is the greatest possible number with its set of digits, then print “not possible”.
+Examples:
+For simplicity of implementation, we have considered input number as a string.
+
+Input:  n = "218765"
+Output: "251678"
+
+Input:  n = "1234"
+Output: "1243"
+
+Input: n = "4321"
+Output: "Not Possible"
+
+Input: n = "534976"
+Output: "536479"
+-----------------------------------------------------------------------------------------------------
+Count number of binary strings without consecutive 1′s
+Given a positive integer N, count all possible distinct binary strings of length N such that 
+there are no consecutive 1′s.
+Input:  N = 2
+Output: 3
+// The 3 strings are 00, 01, 10
+
+Input: N = 3
+Output: 5
+// The 5 strings are 000, 001, 010, 100, 101
+-----------------------------------------------------------------------------------------------------
+Find k closest elements to a given value
+Given a sorted array arr[] and a value X, find the k closest elements to X in arr[]. 
+Examples:
+
+Input: K = 4, X = 35
+       arr[] = {12, 16, 22, 30, 35, 39, 42, 
+               45, 48, 50, 53, 55, 56}
+Output: 30 39 42 45
+Note that if the element is present in array, then it should not be in output, only the other closest elements are required.
+-----------------------------------------------------------------------------------------------------
+Create a matrix with alternating rectangles of O and X
+Write a code which inputs two numbers m and n and creates a matrix of size m x n (m rows and n columns) in which every elements is either X or 0. The Xs and 0s must be filled alternatively, the matrix should have outermost rectangle of Xs, then a rectangle of 0s, then a rectangle of Xs, and so on.
+
+Examples:
+
+Input: m = 3, n = 3
+Output: Following matrix 
+X X X
+X 0 X
+X X X
+
+Input: m = 4, n = 5
+Output: Following matrix
+X X X X X
+X 0 0 0 X
+X 0 0 0 X
+X X X X X
+
+Input:  m = 5, n = 5
+Output: Following matrix
+X X X X X
+X 0 0 0 X
+X 0 X 0 X
+X 0 0 0 X
+X X X X X
+
+Input:  m = 6, n = 7
+Output: Following matrix
+X X X X X X X
+X 0 0 0 0 0 X
+X 0 X X X 0 X
+X 0 X X X 0 X
+X 0 0 0 0 0 X
+X X X X X X X 
+-----------------------------------------------------------------------------------------------------
+Smallest subarray with sum greater than a given value
+Given an array of integers and a number x, find the smallest subarray with sum greater than the given value.
+
+Examples:
+arr[] = {1, 4, 45, 6, 0, 19}
+   x  =  51
+Output: 3
+Minimum length subarray is {4, 45, 6}
+-----------------------------------------------------------------------------------------------------
+Remove minimum elements from either side such that 2*min becomes more than max
+Given an unsorted array, trim the array such that twice of minimum is greater than maximum in the trimmed array. 
+Elements should be removed either end of the array.
+
+Number of removals should be minimum.
+
+Examples:
+
+arr[] = {4, 5, 100, 9, 10, 11, 12, 15, 200}
+Output: 4
+We need to remove 4 elements (4, 5, 100, 200)
+so that 2*min becomes more than max.
+-----------------------------------------------------------------------------------------------------
+Divide and Conquer | Set 6 (Search in a Row-wise and Column-wise Sorted 2D Array)
+Given an n x n matrix, where every row and column is sorted in increasing order. Given a key, 
+how to decide whether this key is in the matrix. 
+-----------------------------------------------------------------------------------------------------
+Bucket Sort
+Bucket sort is mainly useful when input is uniformly distributed over a range. For example, 
+consider the following problem. 
+Sort a large set of floating point numbers which are in range from 0.0 to 1.0 and are uniformly 
+distributed across the range. 
+How do we sort the numbers efficiently?
+-----------------------------------------------------------------------------------------------------
+Kth smallest element in a row-wise and column-wise sorted 2D array | Set 1
+Given an n x n matrix, where every row and column is sorted in non-decreasing order. Find the kth smallest
+ element in the given 2D array.
+For example, consider the following 2D array.
+
+        10, 20, 30, 40
+        15, 25, 35, 45
+        24, 29, 37, 48
+        32, 33, 39, 50
+The 3rd smallest element is 20 and 7th smallest element is 30
+-----------------------------------------------------------------------------------------------------
+Find the number of zeroes
+Given an array of 1s and 0s which has all 1s first followed by all 0s. Find the number of 0s. 
+Count the number of zeroes in the given array.
+Input: arr[] = {1, 1, 1, 1, 0, 0}
+Output: 2
+-----------------------------------------------------------------------------------------------------
+Find if there is a subarray with 0 sum
+Given an array of positive and negative numbers, find if there is a subarray with 0 sum.
+
+Examples:
+
+Input: {4, 2, -3, 1, 6}
+Output: true 
+There is a subarray with zero sum from index 1 to 3.
+-----------------------------------------------------------------------------------------------------
+Divide and Conquer | Set 5 (Strassen’s Matrix Multiplication)
+Given two square matrices A and B of size n x n each, find their multiplication matrix.
+-----------------------------------------------------------------------------------------------------
+Count all possible groups of size 2 or 3 that have sum as multiple of 3
+Given an unsorted integer (positive values only) array of size ‘n’, we can form a group of two or three, 
+the group should be such that the sum of all elements in that group is a multiple of 3. 
+Count all possible number of groups that can be generated in this way.
+-----------------------------------------------------------------------------------------------------
+Sort n numbers in range from 0 to n^2 – 1 in linear time
+Given an array of numbers of size n. It is also given that the array elements are in range from 0 to n2 – 1. 
+Sort the given array in linear time.
+-----------------------------------------------------------------------------------------------------
+Rearrange an array so that arr[i] becomes arr[arr[i]] with O(1) extra space
+Given an array arr[] of size n where every element is in range from 0 to n-1. Rearrange the given array 
+so that arr[i] becomes arr[arr[i]]. This should be done with O(1) extra space.
+-----------------------------------------------------------------------------------------------------
+Suffix Array | Set 1 (Introduction)
+We strongly recommend to read following post on suffix trees as a pre-requisite for this post.
+-----------------------------------------------------------------------------------------------------
+Count all possible paths from top left to bottom right of a mXn matrix
+The problem is to count all the possible paths from top left to bottom right of a mXn matrix 
+with the constraints that from each cell you can either move only to right or down
+-----------------------------------------------------------------------------------------------------
+Count all distinct pairs with difference equal to k
+Given an integer array and a positive integer k, count all distinct pairs with difference equal to k.
+
+Examples:
+
+Input: arr[] = {1, 5, 3, 4, 2}, k = 3
+Output: 2
+There are 2 pairs with difference 3, the pairs are {1, 4} and {5, 2} 
+-----------------------------------------------------------------------------------------------------
+Find number of pairs such that x^y > y^x
+Given two arrays X[] and Y[] of positive integers, find number of pairs such that x^y > y^x where x is an 
+element from X[] and y is an element from Y[].
+
+Examples:
+
+  Input: X[] = {2, 1, 6}, Y = {1, 5}
+  Output: 3 
+  // There are total 3 pairs where pow(x, y) is greater than pow(y, x)
+  // Pairs are (2, 1), (2, 5) and (6, 1)
+-----------------------------------------------------------------------------------------------------
+Move all zeroes to end of array
+-----------------------------------------------------------------------------------------------------
+Radix Sort
+-----------------------------------------------------------------------------------------------------
+Merge k sorted arrays | Set 1
+Given k sorted arrays of size n each, merge them and print the sorted output.
+-----------------------------------------------------------------------------------------------------
+Stable Marriage Problem
+Given N men and N women, where each person has ranked all members of the opposite sex in order of preference,
+ marry the men and women together such that there are no two people of opposite sex who would both 
+rather have each other than their current partners. If there are no such people, all the marriages are “stable” 
+-----------------------------------------------------------------------------------------------------
+Find the minimum element in a sorted and rotated array
+A sorted array is rotated at some unknown point, find the minimum element in it.
+-----------------------------------------------------------------------------------------------------
+Find the Increasing subsequence of length three with maximum product
+Given a sequence of non-negative integers, find the subsequence of length 3 having maximum product 
+with the numbers of the subsequence being in ascending order.
+-----------------------------------------------------------------------------------------------------
+Find the point where a monotonically increasing function becomes positive first time
+Given a function ‘int f(unsigned int x)’ which takes a non-negative integer ‘x’ as input and returns an
+ integer as output. The function is monotonically increasing with respect to value of x, i.e., 
+the value of f(x+1) is greater than f(x) for every input x. Find the value ‘n’ where f() becomes positive
+ for the first time. Since f() is monotonically increasing, values of f(n+1), f(n+2),… must be positive and 
+values of f(n-2), f(n-3), .. must be negative.
+Find n in O(logn) time, you may assume that f(x) can be evaluated in O(1) time for any input x.
+-----------------------------------------------------------------------------------------------------
+Given an array of of size n and a number k, find all elements that appear more than n/k times
+-----------------------------------------------------------------------------------------------------
+Print all possible combinations of r elements in a given array of size n
+Given an array of size n, generate and print all possible combinations of r elements in array. 
+For example, if input array is {1, 2, 3, 4} and r is 2, then output should be {1, 2}, {1, 3}, {1, 4}, {2, 3}, {2, 4} and {3, 4}.
+-----------------------------------------------------------------------------------------------------
+Find a peak element
+Given an array of integers. Find a peak element in it. An array element is peak if it is NOT smaller than
+ its neighbors. For corner elements, we need to consider only one neighbor. For example, 
+for input array {5, 10, 20, 15}, 20 is the only peak element. For input array {10, 20, 15, 2, 23, 90, 67},
+there are two peak elements: 20 and 90. Note that we need to return any one peak element.
+-----------------------------------------------------------------------------------------------------
+Sort elements by frequency | Set 2
+Given an array of integers, sort the array according to frequency of elements. For example, 
+if the input array is {2, 3, 2, 4, 5, 12, 2, 3, 3, 3, 12}, then modify the array to {3, 3, 3, 3, 2, 2, 2, 12, 12, 4, 5}. 
+-----------------------------------------------------------------------------------------------------
+Rearrange positive and negative numbers in O(n) time and O(1) extra space
+An array contains both positive and negative numbers in random order. Rearrange the array elements so that 
+positive and negative numbers are placed alternatively. Number of positive and negative numbers need not be equal. 
+If there are more positive numbers they appear at the end of the array. If there are more negative numbers,
+ they too appear in the end of the array.
+-----------------------------------------------------------------------------------------------------
+Stock Buy Sell to Maximize Profit
+The cost of a stock on each day is given in an array, find the max profit that you can make by buying and selling in those days.
+ For example, if the given array is {100, 180, 260, 310, 40, 535, 695}, the maximum profit can earned by buying on day 0, 
+selling on day 3. Again buy on day 4 and sell on day 6. If the given array of prices is sorted in decreasing order, 
+then profit cannot be earned at all.
+-----------------------------------------------------------------------------------------------------
+Find the maximum repeating number in O(n) time and O(1) extra space
+Given an array of size n, the array contains numbers in range from 0 to k-1 where k is a positive integer 
+and k <= n. Find the maximum repeating number in this array. For example, let k be 10 the given array be arr[] = 
+{1, 2, 2, 2, 0, 2, 0, 2, 3, 8, 0, 9, 2, 3}, the maximum repeating number would be 2. Expected time complexity is O(n) and extra space allowed is O(1). 
+Modifications to array are allowed.
+-----------------------------------------------------------------------------------------------------
+Merge Overlapping Intervals
+Given a set of time intervals in any order, merge all overlapping intervals into one and output the result
+ which should have only mutually exclusive intervals. Let the intervals be represented as pairs of integers for simplicity. 
+For example, let the given set of intervals be {{1,3}, {2,4}, {5,7}, {6,8} }. The intervals {1,3} and {2,4} 
+overlap with each other, so they should be merged and become {1, 4}. Similarly {5, 7} and {6, 8} should be merged and become {5, 8}
+-----------------------------------------------------------------------------------------------------
+Counting Sort
+Counting sort is a sorting technique based on keys between a specific range. It works by counting
+ the number of objects having distinct key values (kind of hashing). Then doing some arithmetic to 
+calculate the position of each object in the output sequence.
+-----------------------------------------------------------------------------------------------------
+Divide and Conquer | Set 3 (Maximum Subarray Sum)
+You are given a one dimensional array that may contain both positive and negative integers, find the sum of 
+contiguous subarray of numbers which has the largest sum.
+-----------------------------------------------------------------------------------------------------
+Print Matrix Diagonally
+Given a 2D matrix, print all elements of the given matrix in diagonal order. For example, consider the following 5 X 4 input matrix.
+
+    1     2     3     4
+    5     6     7     8
+    9    10    11    12
+   13    14    15    16
+   17    18    19    20
+Diagonal printing of the above matrix is
+
+    1
+    5     2
+    9     6     3
+   13    10     7     4
+   17    14    11     8
+   18    15    12
+   19    16
+   20
+-----------------------------------------------------------------------------------------------------
+Tug of War
+Given a set of n integers, divide the set in two subsets of n/2 sizes each such that the difference of the sum 
+of two subsets is as minimum as possible. If n is even, then sizes of two subsets must be strictly n/2 and if n is odd, 
+then size of one subset must be (n-1)/2 and size of other subset must be (n+1)/2.
+
+For example, let given set be {3, 4, 5, -3, 100, 1, 89, 54, 23, 20}, the size of set is 10. Output for this set 
+should be {4, 100, 1, 23, 20} and {3, 5, -3, 89, 54}. Both output subsets are of size 5 and sum of elements in both 
+subsets is same (148 and 148).
+Let us consider another example where n is odd. Let given set be {23, 45, -34, 12, 0, 98, -99, 4, 189, -1, 4}. 
+The output subsets should be {45, -34, 12, 98, -1} and {23, 0, -99, 4, 189, 4}. The sums of elements in two subsets 
+are 120 and 121 respectively.
+-----------------------------------------------------------------------------------------------------
+A Pancake Sorting Problem
+We have discussed Pancake Sorting in the previous post. Following is a problem based on Pancake Sorting.
+Given an an unsorted array, sort the given array. You are allowed to do only following operation on array.
+
+flip(arr, i): Reverse array from 0 to i 
+-----------------------------------------------------------------------------------------------------
+Pancake sorting
+Given an an unsorted array, sort the given array. You are allowed to do only following operation on array.
+
+flip(arr, i): Reverse array from 0 to i 
+-----------------------------------------------------------------------------------------------------
+Dynamic Programming | Set 27 (Maximum sum rectangle in a 2D matrix)
+Given a 2D array, find the maximum sum subarray in it. For example, in the following 2D array, 
+the maximum sum subarray is highlighted with blue rectangle and sum of this subarray is 29.
+-----------------------------------------------------------------------------------------------------
+Arrange given numbers to form the biggest number
+Given an array of numbers, arrange them in a way that yields the largest value. For example, 
+if the given numbers are {54, 546, 548, 60}, the arrangement 6054854654 gives the largest value. 
+And if the given numbers are {1, 34, 3, 98, 9, 76, 45, 4}, then the arrangement 998764543431 gives the largest value.
+-----------------------------------------------------------------------------------------------------
+Find the first circular tour that visits all petrol pumps
+Suppose there is a circle. There are n petrol pumps on that circle. You are given two sets of data.
+
+1. The amount of petrol that petrol pump will give.
+2. Distance from that petrol pump to the next petrol pump.
+
+Calculate the first point from where a truck will be able to complete the circle (The truck will stop at each
+ petrol pump and it has infinite capacity). Expected time complexity is O(n). Assume for 1 litre petrol, the truck 
+can go 1 unit of distance.
+
+For example, let there be 4 petrol pumps with amount of petrol and distance to next petrol pump value pairs as {4, 6},
+ {6, 5}, {7, 3} and {4, 5}. The first point from where truck can make a circular tour is 2nd petrol pump. Output should be
+ “start = 1″ (index of 2nd petrol pump).
+-----------------------------------------------------------------------------------------------------
+Construction of Longest Monotonically Increasing Subsequence (N log N)
+In my previous post, I have explained about longest monotonically increasing sub-sequence (LIS) problem in detail.
+ However, the post only covered code related to querying size of LIS, but not the construction of LIS. 
+I left it as an exercise. If you have solved, cheers. If not, you are not alone, here is code.
+-----------------------------------------------------------------------------------------------------
+Find the number of islands
+Given a boolean 2D matrix, find the number of islands.
+
+This is an variation of the standard problem: “Counting number of connected components in a undirected graph”.
+-----------------------------------------------------------------------------------------------------
+Inplace M x N size matrix transpose | Updated
+About four months of gap (missing GFG), a new post. Given an M x N matrix, transpose the matrix without auxiliary 
+memory.It is easy to transpose matrix using an auxiliary array. If the matrix is symmetric in size, we can transpose
+ the matrix inplace by mirroring the 2D array across it’s diagonal (try yourself). How to transpose an arbitrary 
+size matrix inplace? See the following matrix,
+-----------------------------------------------------------------------------------------------------
+Iterative Quick Sort
+Following is a typical recursive implementation of Quick Sort that uses last element as pivot.
+-----------------------------------------------------------------------------------------------------
+Count the number of possible triangles
+Given an unsorted array of positive integers. Find the number of triangles that can be formed 
+with three different array elements as three sides of triangles. For a triangle to be possible 
+from 3 values, the sum of any two values (or sides) must be greater than the third value (or third side).
+For example, if the input array is {4, 6, 3, 7}, the output should be 3. There are three triangles possible
+ {3, 4, 6}, {4, 6, 7} and {3, 6, 7}. Note that {3, 4, 7} is not a possible triangle.
+As another example, consider the array {10, 21, 22, 100, 101, 200, 300}. There can be 6 possible triangles:
+ {10, 21, 22}, {21, 100, 101}, {22, 100, 101}, {10, 100, 101}, {100, 101, 200} and {101, 200, 300}
+-----------------------------------------------------------------------------------------------------
+Shuffle a given array
+Given an array, write a program to generate a random permutation of array elements. T
+his question is also asked as “shuffle a deck of cards” or “randomize a given array”.
+-----------------------------------------------------------------------------------------------------
+Print unique rows in a given boolean matrix
+Given a binary matrix, print all unique rows of the given matrix.
+
+Input:
+	{0, 1, 0, 0, 1}
+        {1, 0, 1, 1, 0}
+        {0, 1, 0, 0, 1}
+        {1, 1, 1, 0, 0}
+Output:
+	0 1 0 0 1 
+	1 0 1 1 0 
+	1 1 1 0 0 
+-----------------------------------------------------------------------------------------------------
+Median of two sorted arrays of different sizes
+This is an extension of median of two sorted arrays of equal size problem. Here we handle arrays of unequal size also.
+-----------------------------------------------------------------------------------------------------
+Find the row with maximum number of 1s
+Given a boolean 2D array, where each row is sorted. Find the row with the maximum number of 1s.
+
+Example
+Input matrix
+0 1 1 1
+0 0 1 1
+1 1 1 1  // this row has maximum 1s
+0 0 0 0
+Output: 2
+-----------------------------------------------------------------------------------------------------
+Maximum circular subarray sum
+Given n numbers (both +ve and -ve), arranged in a circle, fnd the maximum sum of consecutive number.
+
+Examples:
+
+Input: a[] = {8, -8, 9, -9, 10, -11, 12}
+Output: 22 (12 + 8 - 8 + 9 - 9 + 10)
+-----------------------------------------------------------------------------------------------------
+Sort a nearly sorted (or K sorted) array
+Given an array of n elements, where each element is at most k away from its target position, devise an algorithm 
+that sorts in O(n log k) time. 
+For example, let us consider k is 2, an element at index 7 in the sorted array, can be at indexes 5, 6, 7, 8, 9 
+in the given array.
+-----------------------------------------------------------------------------------------------------
+Find four elements that sum to a given value | Set 2 ( O(n^2Logn) Solution)
+Given an array of integers, find all combination of four elements in the array whose sum is equal to a given value X.
+For example, if the given array is {10, 2, 3, 4, 5, 9, 7, 8} and X = 23, then your function 
+should print “3 5 7 8″ (3 + 5 + 7 + 8 = 23).
+-----------------------------------------------------------------------------------------------------
+Find four elements that sum to a given value | Set 1 (n^3 solution)
+Given an array of integers, find all combination of four elements in the array whose sum is equal 
+to a given value X.For example, if the given array is {10, 2, 3, 4, 5, 9, 7, 8} and X = 23, 
+then your function should print “3 5 7 8″ (3 + 5 + 7 + 8 = 23).
+-----------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------
+
+
